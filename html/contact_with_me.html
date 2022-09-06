@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact_with_me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font 아이콘을 사용하기 위해서-->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/contact_with_me.css">
+</head>
+<body>
+    <section id="contact">
+        <div class="container">
+            <div class="title">
+                <h4>CONTACT</h4>
+                <h2>Contact With Me</h2>
+            </div>
+            <div class="contact-me">
+                <div class="left">
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>phone</h3>
+                            <p>010-6314-4671</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>email</h3>
+                            <p>견적문의 : hjy@skgk.co.kr</p>
+                            <p>세금계산서 : skgk2022.co.kr</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fa-solid fa-location-crosshairs"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>address</h3>
+                            <p>디지털로63 경기도 광명시 철산3동 1212동 1205호</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <form action="#">
+                    <!--form 태그는 웹 페이지에서의 입력 양식을 의미한다. ex) 로그인 창, 회원가입
+                    name: 폼의 이름
+                    action: 폼 데이터가 전송되는 백엔드 url
+                    method: 폼 전송 방식(GET/POST)
+                    https://ofcourse.kr/html-course/form-%ED%83%9C%EA%B7%B8-->
+                        <div class="form-group">
+                            <label for="name">name</label>
+                            <input type="text" id="name" placeholder="이름을 적어주세요.">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">email</label>
+                            <input type="text" id="email" placeholder="고객님의 이메일을 적어주세요.">
+                            <!--label의 for과 input의 id가 같을 경우에 'email'만 눌러도 바로 입력 가능-->
+                            <!--input 태그에서 autocomplete="off" 지정시 자동완성 기능 삭제-->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="msg">message</label>
+                            <textarea id="msg"placeholder="주문 받고 싶은 형태 알려주면 적어줄게요(단, 간단하게)"></textarea>
+                            <!--textarea는 여러줄을 입력 가능하게 해준다. -->
+                        </div>
+
+                        <button>send</button>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>

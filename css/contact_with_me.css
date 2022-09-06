@@ -1,0 +1,80 @@
+section .contact-me::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+section .contact-me .left{
+    width:30%;
+    float:left;
+}
+
+section .contact-me .left .card{
+    border: 1px solid #ccc;
+    padding: 1rem;
+    display: flex;
+    /*display: flex;는 수평이 될 요소들의 container에 적용한다.*/
+    align-items: center;
+    /*align-items속성은 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정한다.
+    align-items: center; 안의 내용 요소의 정렬 상태를 가운데로 설정한다.*/
+    margin-bottom: 1.25rem;
+}
+
+section .contact-me .left .card i{
+    font-size: 2rem;
+    margin-right:15px;
+}
+
+section .contact-me .right{
+    width:65%;
+    float:left;
+    margin-left:5%;
+    border: 1px solid #ccc;
+    padding:1rem;
+}
+
+section .contact-me .right .form-group{
+    margin-bottom:1.25rem;
+}
+
+section .contact-me .right .form-group label{
+    display:block;
+    margin-bottom: 0.85rem;
+}
+
+section .contact-me .right .form-group input{
+    width:100%;
+    padding:0.625rem;
+    outline:none;
+    /*outline:none; 주변선 없애기*/
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+/*~:focus{}면 ~이 선택되면 이라는 뜻이다.*/
+section .contact-me .right .form-group input:focus,
+section .contact-me .right .form-group textarea:focus{
+    border:1px solid #719ece;
+    box-shadow: 0 0 10px #719ece;
+    /*box-shadow: 0 0 10px #719ece;는 그림자를 나타낸다. 
+    box-shadow: x좌표 y좌표 크기 색상;*/
+}
+
+section .contact-me .right .form-group textarea{
+    width:100%;
+    height: 300px;
+    padding:0.625rem;
+    outline:none;
+    resize: none;
+    /*resize: none; 크기 조정이 불가능하게 한다.*/
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+section .contact-me .right button{
+    width: 100%;
+    padding:1rem;
+    background-color:#f78b00;
+    border:none;
+    color:white;
+}

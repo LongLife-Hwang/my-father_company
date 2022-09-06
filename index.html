@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>완성본</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font 아이콘을 사용하기 위해서-->
+    <link rel="stylesheet" href="style.css">
+    <!--띄어쓰기 조심-->
+</head>
+
+<!--오른쪽 마우스 금지
+https://heinafantasy.com/120-->
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onkeydown="return false">
+    <!--header-->
+    <header>
+        <!--header은 문서나 특징 섹션(section)의 헤더(header)를 정의할 때 사용--> 
+            <div class="container">
+                <h1>
+                    <button data-animation-scroll='true' data-target="#main">회사이름</button>
+                </h1>
+                <nav>
+                <!--nav태그는 다른 페이지 또는 현재 페이지의 다른 부분과 연결되는 네비게이션 링크들의 집합-->
+                    <ul>
+                    <!--ul의 점 없앨려면 style="list-style: none;"사용하기-->
+                        <li>
+                            <button data-animation-scroll='true' data-target="#about">회사 소개</button>
+                        </li>
+                        <li>
+                            <button data-animation-scroll='true' data-target="#feature">Feature</button>
+                        </li>
+                        <li>
+                            <button data-animation-scroll='true' data-target="#portfolio">Portfolio</button>
+                        </li>
+                        <li>
+                            <button data-animation-scroll='true' data-target="#contact">Contact</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+
+    <!--main-->
+    <main id="main">
+        <!--main 태그는 문서 내부의 핵심적인 콘텐츠를 나타낼 때 사용하는 태그입니다. -->
+            <div class="container">
+                <h4>Welcome</h4>
+                <h2>회사이름 <span></span></h2>
+                <p>대단하다. 왜냐하면 대단하기 때문이다. </p>
+                <br>
+                <p>대단하다. 왜냐하면 대단하기 때문이다. </p>
+                <p>대단하다. 왜냐하면 대단하기 때문이다. </p>
+                <p>대단하다. 왜냐하면 대단하기 때문이다. </p>
+                <!--'alt + z'시 화면에 맞추어서 가로 스크롤 없어짐-->
+                <button class="download"><a href = '#portfolio'>제품소개</a></button>
+                <button class="mouse"><i class="fa-solid fa-computer-mouse"></i></button>
+                <!--<i class="fa-solid fa-computer-mouse"></i> 아이콘 가져오기-->
+                <!--'https://fontawesome.com/icons/computer-mouse?s=solid' 아이콘 공짜로 얻기 사이트-->
+            </div>
+    </main>
+
+    <!--about_me-->
+    <section id="about">
+        <!--section tag는 HTML 문서에 퐘된 독립적인 섹션(section)을 정의할 때 사용한다.-->
+            <div class="container">
+                <div class="title">
+                    <h4>Who Am I</h4>
+                    <h2>About Me</h2>
+                </div>
+                <div class="about-self">
+                    <div class="left">
+                        <!--
+                        <img src="./images/me_alone.jpg" alt="내 사진">
+                        -->
+                        <div class="card">
+                            <div class="icon">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div class="info-text">
+                                <h5>phone</h5>
+                                <p>010-1234-5671</p>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="icon">
+                                <i class="fa-solid fa-envelope-open-text"></i>
+                            </div>
+                            <div class="info-text">
+                                <h5>email</h5>
+                                <p>견적문의 1234@naver.com</p>
+                                <p>세금계산서 1234@naver.com</p>
+                            </div>
+                        </div>
+    
+                        <div class="card">
+                            <div class="icon">
+                                <i class="fa-solid fa-location-crosshairs"></i>
+                            </div>
+                            <div class="info-text">
+                                <h5>address</h5>
+                                <p>여기입니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <h3><strong>저는 </strong>홍길동입니다.</h3>
+                        <p>우리 가족은요</p>
+                        <p>아빠랑</p>
+                        <p>엄마랑</p>
+                        <p>저랑</p>
+                        <p>동생으로 </p>
+                        <p>구성돼요</p>
+                    </div>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d850967.604009362!2d126.01123202370937!3d33.576955215802215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350ce3544cc84045%3A0x66bc36d2981ebf31!2z7KCc7KO87Yq567OE7J6Q7LmY64-E!5e0!3m2!1sko!2skr!4v1662192895666!5m2!1sko!2skr" width="600" height="450" style="border:0;" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!--https://lcw126.tistory.com/192-->
+                        
+                    
+                </div>
+            </div>
+    </section>
+
+    <!--what_i_do-->
+    <section id="feature">
+        <div class="container">
+            <div class="title">
+                <h4>Features</h4>
+                <h2>What I Do</h2>
+            </div>
+
+            <div class="do-me">
+                <!--
+                <div class="do-inner">
+                    <img class="log" src="./images/siemens.png" alt="siemens">
+                </div>
+                -->
+
+                
+                <div class="do-inner">
+                    <a href="http://www.seojin.biz/main/main.php" target="_blank">
+                        <div class="icon seojin">
+                            <i class="fa-solid fa-s"></i>
+                            <i class="fa-solid fa-e"></i>
+                            <i class="fa-solid fa-o"></i>
+                            <i class="fa-solid fa-j"></i>
+                            <i class="fa-solid fa-i"></i> 
+                            <i class="fa-solid fa-n"></i>
+                            <br>
+                            <span>
+                                <i class="fa-solid fa-i"></i>
+                                <i class="fa-solid fa-n"></i>
+                                <i class="fa-solid fa-s"></i>
+                                <i class="fa-solid fa-t"></i>
+                                <i class="fa-solid fa-e"></i>
+                                <i class="fa-solid fa-c"></i>
+                                <i class="fa-solid fa-h"></i>
+                            </span>
+                        </div>
+                        <div class="log seojin_img">
+                            <span>
+                            <img src="images/seojininstech.webp" alt='seojin'>
+                            </span>
+                        </div>
+                        <div class="content">
+                            <p><span>메인 화면으로 들어가게 됩니다.</span></p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="do-inner">
+                    <a href="https://new.siemens.com/kr/ko.html" target="_blank">
+                        <div class="icon">
+                            <i class="fa-solid fa-s"></i>
+                            <i class="fa-solid fa-e"></i>
+                            <i class="fa-solid fa-m"></i>
+                            <i class="fa-solid fa-e"></i>
+                            <i class="fa-solid fa-n"></i>
+                            <i class="fa-solid fa-s"></i>      
+                        </div>
+                        <div class="log siemens_img">
+                            <span>
+                            <img src="images/siemens.png" alt='siemens'>
+                            </span>
+                        </div>
+                        <div class="content">
+                            <p><span>메인 화면으로 들어가게 됩니다.</span></p>
+                        </div>
+                    </a>
+                </div>
+                <!--SeoJin Instec, SEMENS, KANSAI, NOHKEN-->
+                <div class="do-inner">
+                    <a href="https://www.kansai.com/" target="_blank">
+                        <div class="icon">
+                            <i class="fa-solid fa-k"></i>
+                            <i class="fa-solid fa-a"></i>
+                            <i class="fa-solid fa-n"></i>
+                            <i class="fa-solid fa-s"></i>
+                            <i class="fa-solid fa-a"></i>
+                            <i class="fa-solid fa-i"></i>
+                        </div>
+                        <div class="log kansai_img">
+                            <span>
+                            <img src="images/kansai3.png" alt='kansai'>
+                            </span>
+                        </div>
+                        <div class="content">
+                            <p><span>메인 화면으로 들어가게 됩니다.</span></p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="do-inner">
+                    <a href="https://www.nohken.com/en/" target="_blank">
+                        <div class="icon">
+                            <i class="fa-solid fa-n"></i>
+                            <i class="fa-solid fa-o"></i>
+                            <i class="fa-solid fa-h"></i>
+                            <i class="fa-solid fa-k"></i>
+                            <i class="fa-solid fa-e"></i>
+                            <i class="fa-solid fa-n"></i>
+                        </div>
+                        <div class="log nohken_img">
+                            <span>
+                            <img src="images/nohken.png" alt='nohken'>
+                            </span>
+                        </div>
+                        <div class="content">
+                            <p><span>메인 화면으로 들어가게 됩니다.</span></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+            
+            <!--
+            <div class="do-inner">
+                <img class="log" src="./images/kansai.svg" alt="kansai">
+            </div>
+
+            <div class="do-inner">
+                <img class="log" src="./images/seojininstech2.jpg" alt="seojininstech">
+            </div>
+
+            <div class="do-inner">
+                <img class="log" src="./images/nohken.png" alt="nohken">
+            </div>
+            -->
+
+    </section>
+
+    <!--background-->
+    <div class="bg">
+    </div>
+
+    <!--portpolio-->
+    <section id='portfolio'>
+        <div class="containder">
+            <div class="title">
+                <h4>PORTFOLIOBACK</h4>
+                <h2>PortFolio <a href="./deep/html/condact_product.html">더보기</a></h2>
+            </div>
+            <div class="portfolio-me">
+                <div class="portfolio-inner">
+                    <img src='./images/mock1.png' alt='샘플이미지1'>
+                    <strong>BRADING</strong>
+                    <h3>Package Design</h3>
+                </div>
+
+                <div class="portfolio-inner">
+                    <img src='./images/mock2.png' alt='샘플이미지2'>
+                    <strong>DEVELOPMENT</strong>
+                    <h3>Tablet App Dev</h3>
+                </div>
+
+                <div class="portfolio-inner">
+                    <img src='./images/mock3.png' alt='샘플이미지3'>
+                    <strong>MARKETING</strong>
+                    <h3>Coka Cala</h3>
+                </div>
+
+                <div class="portfolio-inner">
+                    <img src='./images/mock4.png' alt='샘플이미지4'>
+                    <strong>APP</strong>
+                    <h3>FaceBook Clone</h3>
+                </div>
+
+                <div class="portfolio-inner">
+                    <img src='./images/mock5.png' alt='샘플이미지5'>
+                    <strong>APP</strong>
+                    <h3>Netflix Clone</h3>
+                </div>
+
+                <div class="portfolio-inner">
+                    <img src='./images/mock6.png' alt='샘플이미지6'>
+                    <strong>WEB</strong>
+                    <h3>FirmDee Web</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--contact_with_me-->
+    <section id="contact">
+        <div class="container">
+            <div class="title">
+                <h4>CONTACT</h4>
+                <h2>Contact With Me</h2>
+            </div>
+            <div class="contact-me">
+                <div class="left">
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>phone</h3>
+                            <p>010-1234-5789</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>email</h3>
+                            <p>견적문의 : 1234@naver.com</p>
+                            <p>세금계산서 : 1234@naver.com</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fa-solid fa-location-crosshairs"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>address</h3>
+                            <p>여기입니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <form action="#">
+                    <!--form 태그는 웹 페이지에서의 입력 양식을 의미한다. ex) 로그인 창, 회원가입
+                    name: 폼의 이름
+                    action: 폼 데이터가 전송되는 백엔드 url
+                    method: 폼 전송 방식(GET/POST)
+                    https://ofcourse.kr/html-course/form-%ED%83%9C%EA%B7%B8-->
+                        <div class="form-group">
+                            <label for="name">name</label>
+                            <input readonly type="text" id="name" placeholder="이름을 적어주세요.">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">email</label>
+                            <input readonly type="text" id="email" placeholder="고객님의 이메일을 적어주세요.">
+                            <!--label의 for과 input의 id가 같을 경우에 'email'만 눌러도 바로 입력 가능-->
+                            <!--input 태그에서 autocomplete="off" 지정시 자동완성 기능 삭제-->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="msg">message</label>
+                            <textarea readonly id="msg"placeholder="이메일은 메일로 직접 보내주세요.&#13;&#10;2.저것도 해주세요.&#13;&#10;3.요거는 어때요.&#13;&#10;이메일은 메일로 직접 보내주세요. "></textarea>
+                            <!--textarea는 여러줄을 입력 가능하게 해준다.placeholder에서 &#13;&#10;를 입력시 줄 바꿈이 된다.-->
+                        </div>
+                        <!--send 버튼
+                        <button>send</button>
+                        -->
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="last">
+        <div class="footer">
+            <div class ='footer_menu'>
+                <a href="./deep/html/agree.html#agree">개인정보처리 방침</a>
+                <a href="./deep/html/agree.html#email_">이메일 무단 수집 거부</a>
+            </div>
+            <hr>
+            <!--줄을 만들어 버린다.-->
+            <div class="summary">
+                <div class="summary_main">
+                    <a href="#main">
+                        <img src='./images/samsung.png' alt='삼성 로고'>
+                    </a>
+                </div>
+                <div class="summary_content">
+                    <div class="summary_left">
+                        <p>
+                            00000)경기도 광명시 디지털로 63 주공12단지 1212동1205호
+                        </p>
+
+                        <p>
+                            사업자 번호 : 1234-5678-9101
+                        </p>
+
+                        <p>
+                            이메일 : 1234@naver.com
+                        </p>
+
+                        <p>
+                            전화번호 : 010-1234-5678
+                        </p>
+
+                        <p>
+                            대표자 : 홍길동
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--.js연결하기-->
+    <script src ="script.js"></script>
+</body>
+</html>

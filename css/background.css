@@ -1,0 +1,7 @@
+.bg{
+    background: url('../images/background.jpg') center center;
+    background-size: cover;
+    background-attachment: fixed;
+    /*background-attachment: fixed;시 문서를 스크롤 할 경우 배경 이미지가 고정된 위치를 가진다. 예를 들어 body에 fixed로 배경이미지를 적용한 경우 컨텐츠는 오르고 내리되, 배경 이미지는 움직이지 않는다.*/
+    height:650px;
+}

@@ -1,0 +1,51 @@
+section{
+    background-color: #f8f8f8;
+    /*#f8f8f8는 회색의 매우 밝은 색조이다.*/
+}
+
+
+section .do-me::after{
+    content:"";
+    display:block;
+    clear:both;
+    /*clear:both; float 속성 해제하기
+    이를 하는 이유는 그 이후에 오는 다른 요소들까지 똑같은 속성이 전달되어 둘러싼 형태가 되거나 부유된 영역 아래(under)로 들어가게 된다. 따라서 float를 더이상 사용하지 않고 그 전으로 되돌리고 싶다면 사용하는 것이다.*/
+}
+
+section .do-me .do-inner{
+    width: 30%;
+    padding:2rem;
+    float:left;
+    background-color: #fff;
+    margin-right: 5%;
+    cursor:pointer;
+}
+
+/*last-child는 모든 자식(child)요소 중에서 맨 마지막에 위치한 자식(child)요소를 모두 선택한다.*/
+section .do-me .do-inner:last-child{
+    margin-right:0;
+}
+
+section .do-me .do-inner .icon i{
+    font-size: 2.5rem;
+    color:#ff6a6a;
+}
+
+section .do-me .do-inner .content h3{
+    font-size:2rem;
+    margin:1rem 0;
+}
+
+section .do-me .do-inner .content p{
+    font-size: 1.15rem;
+    margin:1rem 0;
+}
+
+section .do-me .do-inner:hover{
+    background-color: lightcoral;
+    color: white;
+}
+
+section .do-me .do-inner:hover .icon i{
+    color:white;
+}

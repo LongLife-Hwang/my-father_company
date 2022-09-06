@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Poppins:wght@400;700;900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    /*padding속성은 내용(content)과 테두리(border))사이의 간격인 패칭 영역의 크기 설정*/
+    box-sizing:border-box;
+    /*box-sizing은 박스의 크기를 화면에 표시하는 방식을 변경
+      속성 값을 border-box로 지정하면 테두리를 포함한 크기를 지정*/
+}
+
+a, a:link, a:visited{
+    color: inherit;
+    /*inherit은 상속*/
+    text-decoration: none;
+}
+
+
+li{
+    list-style:none;
+}
+
+.container{
+    width: 1140px;
+    margin: 0 auto;
+    /*margin:0 auto;로 하면 width의 넓이로 중앙에 맞추는 효과*/
+}
+
+section{
+    font-family:'Poppins', 'Gothic A1', sans-serif;
+    padding:5rem;
+}
+ /*의사 클래스는 형제의 목록에서, 선택하려는 요소의 인덱스 패턴을 나타내는 하나의 매개변수를 사용해 지정한다. 인덱스 1부터 시작한다. 2 -> 4 -> 8 -> ... 순으로 적용*/
+section:nth-child(2n+1){
+    background-color: #f8f8f8;
+    /*#f8f8f8는 회색의 매우 밝은 색조이다.*/
+}
+
+section .title{
+    margin-bottom: 3rem;
+}
+
+section .title h4{
+    font-size: 1.35rem;
+    color: #ed4848;
+    position: relative;
+    /*position속성 정리
+    staitc: 왼쪽에서 오른쪽, 위에서 아래로 쌓인다.
+    relative: static인 상태를 기준으로 움직임. 태긔의 위치를 살짝 변경하고 싶을 때 위, 아래, 왼쪽 속성을 사용해 위치 조절가능
+    absolute: position:static속성을 가지고 있지 않은 조상을 기준으로 움직인다.
+    fixed: 원하는 위치에 고정하기 위해*/
+}
+
+section .title h2{
+    font-size:3.5rem;
+}
+
+section .title p{
+    font-size: 1.15rem;
+}
+
+/*portpolio*/
+/*초기화를 하지 않으면 아래의 자식 노드에 영향을 준다.*/
+
+/*
+section .portfolio-me::after{
+    content:"";
+    display:block;
+    clear: both;
+}
+*/
+
+section .agree_main h1{
+    margin:3rem auto 4rem;
+    font-size: 2.5rem;
+}
+
+section .person h2{
+    border:solid;
+}
+
+section .person p{
+    padding:1rem;
+    color:#808080;
+}
+
+section .person .person_content h3{
+    padding-left:1rem;
+    margin-top:2rem;
+}
+
+section .person .person_content h4{
+    padding-left:1rem;
+}
+
+section .email h2{
+    margin-top: 10rem;
+    border:solid;
+}
+
+section .email p{
+    padding:1rem;
+    color:#808080;
+}
+
+section .email .email_content h3{
+    padding-left:1rem;
+    margin-top:2rem;
+}
+
+section .email .email_content h4{
+    padding-left:1rem;
+}
+
+
+
+/*header*/
+header{
+    position: fixed;
+    /*position: absolute; 부모에 종속 받지 않는다. 
+                          원하는 위치 어디든
+                          */
+    top:0;
+    width:100%;
+    padding:1rem;
+    /*background-color: black;*/
+    z-index:1;
+    /*z-index는 가중치*/
+    background-color:black;
+}
+
+header .container{
+    display:flex;
+    /*display:flex; 해당 요소를 블록 타입으로 정의하기*/
+    justify-content:space-between;
+    /*justify-content:space-between; 플렉스 요소는 요소들 사이에만 여유 공간을 두고 배치
+      justify-content는 플렉스 요소의 수평 방향 정렬 방식을 설정*/
+    align-items: center;
+    /*align-items: center; 플렉스 욧는 플렉스 컨테이너의 가운데에 배치
+      align-items는 플렉스 요소의 수직 방향 정렬 방식 설정*/
+    width: 100%;
+    /* width: 100%; 요소가 부모 요소의 너비에 맞춰 늘어나긴 하지만 
+                    auto를 지정한 것과 달리 페이지를 처음 불러올 
+                    때에만 자동으로 늘어난다. 요소에 가로 마진,테두리,페딩을
+                    지정하면 그 요소의 너비가 부모 너비를 넘어서 늘어난다.*/
+}
+
+header button{
+    background-color: transparent;
+    /*background-color: transparent; 배경을 투명색으로 해준다.*/
+    border:0;
+    /*border:0; 테두리 없애기*/
+    cursor: pointer;
+    /*cursor: pointer; 커서 올리면 마우스 모양*/
+    color:white;
+}
+
+header h1 button{
+    font-size:2rem;
+    /*1.5em, 1.5rem; 상대적인 크기 정함
+               em(상위 요소 크기의 1.5배)
+               rem(html요소의 크기의 몇 배인지로 크기 정함)*/
+    font-weight: bolder;
+    /*font-weight: bolder; 상속된 값보다 굵은 굵기
+      font-weight 글자의 굵기를 정한다.*/
+}
+
+header nav ul{
+    display: flex;
+}
+
+header nav ul li{
+    padding:10px;
+}
+
+header nav ul li button{
+    font-size:1.2rem;
+}
+
+header.active{
+    background-color:#000;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+header nav ul li button:hover{
+    /*border:1px solid #f8f8f8;*/
+    box-shadow: 0 0 17px #f8f8f8;
+    /*box-shadow: 0 0 10px #719ece;는 그림자를 나타낸다. 
+    box-shadow: x좌표 y좌표 크기 색상;*/
+    border-radius: 10px;
+    color:#f8f8f8;
+}
+header h1 button:hover{
+    box-shadow: 0 0 17px #f8f8f8;
+    /*box-shadow: 0 0 10px #719ece;는 그림자를 나타낸다. 
+    box-shadow: x좌표 y좌표 크기 색상;*/
+    border-radius: 20px;
+    color:#f8f8f8;
+}
+
+/*footer*/
+section .footer::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+#last{
+    padding: 2rem 0;
+}
+
+section .footer .footer_menu{
+    text-align: center;
+}
+
+section .footer .footer_menu a{
+    width: 100%;
+    padding: 0px 24px 15px 24px;
+}
+
+section .footer hr{
+    margin:1rem 0;
+    width: 100%;
+}
+/*
+section .footer .summary{
+    text-align: center;
+}
+*/
+section .footer .summary .summary_main{
+    float:left;
+    width: 25%;
+    margin-left:20%;
+    margin-right:5%;
+}
+
+section .footer .summary .summary_main img{
+    position:relative;
+    max-width:100%;
+}
+
+section .footer .summary .summary_content .summary_left{
+    float:left;
+    position:relative;
+    width:45%;
+    margin-left:5%; 
+}
+
+/*
+section .footer .summary span{
+    padding-right:24px;
+}
+*/
+
+
+/*세로로 수직선 그리기
+    width: 100%;
+    border-right:1px solid gray;
+*/
+
+
+/*반응형 웹사이트 만들기*/
+/*@media 어디다 보여줄거니? and 언제해줄거니?
+@media screen and (max-width: 1140px)는 화면에만 적용할거고 1140px보다 작아졌을 때에 적용할거야.*/
+@media screen and (max-width: 1140px){
+    /*header*/
+    main .container{
+        width:992px;;
+    }
+    section .container{
+        width:600px;;
+    }
+    /*portpolio*/
+    section .portfolio-me .portfolio-inner{
+        width: 48%;
+        margin-right:0;
+    }
+    section .portfolio-me .portfolio-inner:nth-child(2n+1){
+        margin-right:4%;
+    }
+    section .footer .summary .summary_main{
+        margin-left:30%;
+        margin-right:30%;
+        width:40%;
+    }
+    section .footer .summary .summary_main a img{
+        max-width:100%;
+    }
+    section .footer .summary .summary_content .summary_left{
+        margin-top: 2rem;
+        width:90%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 992px){
+    /*html*/
+    html{
+        font-size:14px;
+    }
+    /*header*/
+    main .container{
+        width:768px;;
+    }
+    /*portpolio*/
+    section .portfolio-me .portfolio-inner{
+        width: 100%;
+        margin-right:0;
+    }
+}
+
+@media screen and (max-width: 768px){
+    /*html*/
+    html{
+        font-size:13px;
+    }
+    /*header*/
+    main .container{
+        width:576px;;
+    }
+    section .container{
+        width:400px;;
+    }
+    /*what_i_do*/
+    section .do-me .do-inner{
+        width:100%;
+        margin-right:0;
+    }
+}
+
+@media screen and (max-width: 576px){
+    /*html*/
+    html{
+        font-size:12px;
+    }
+    /*header*/
+    main .container{
+        width:480px;;
+    }
+    section .container{
+        width:360px;;
+    }
+}
+
+@media screen and (max-width: 400px){
+    /*html*/
+    html{
+        font-size:11px;
+    }
+    /*header*/
+    main .container{
+        width:320px;;
+    }
+    section .container{
+        width:320px;;
+    }
+    /*main*/
+    main h4{
+        font-size:1.5rem;
+    }
+    /*about_me*/
+    section .title{
+        font-size:3rem;
+    }
+}
